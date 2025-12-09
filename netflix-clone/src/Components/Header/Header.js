@@ -41,3 +41,21 @@ const Header = () => {
 }
 
 export default Header
+
+
+// useEffect(() => {
+  
+//   const handleScroll = () => {
+  
+//     if (window.scrollY > 0) {
+//       setIsScrolled(true); // user has scrolled down
+//     } else {
+//       setIsScrolled(false); // user is at the very top
+//     }
+//   };
+//      window.addEventListener("scroll", handleScroll);
+//       return () => window.removeEventListener("scroll", handleScroll);
+// }, []);
+
+// ${isScrolled ? "header_black" : ""}
+// const [isScrolled, setIsScrolled] = useState(false);

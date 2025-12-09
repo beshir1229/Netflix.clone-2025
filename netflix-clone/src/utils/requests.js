@@ -1,12 +1,16 @@
-const API_KEY = Process.env.REACT_APP_API_KEY;
+export const API_KEY = process.env.REACT_APP_API_KEY;
 
-const requests ={
-    // fetch("https://api.themoviedb.org/3/genre/movie?api_key=${API_KEY}&language=en")
-    fetchAnimationMovies:`/discover/movie?api_key=${API_KEY}&with_genres=16`,
-    fetchDramaMovies:`/discover/movie?api_key=${API_KEY}&with_genres=18`,
-    fetchKidsMovies:`/discover/movie?api_key=${API_KEY}&with_genres=10762`,
-    fetchFamilieMovies:`/discover/movie?api_key=${API_KEY}&with_genres=10751`,
-    fetchTalk:`/discover/movie?api_key=${API_KEY}&with_genres=10767`,
-    fetchWarMovies:`/discover/movie?api_key=${API_KEY}&with_genres=10768`,
+export const baseUrlImg = "https://image.tmdb.org/t/p/original/";
 
-}
+const requests = {
+  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+  fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+  fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+  fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749}`,
+  fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+};
+
+export default requests;
